@@ -1,45 +1,116 @@
-<!DOCTYPE html>
+{% include 'sitio/header.html' %}
 
-<head>
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link rel="icon" href="/static/favicon.png">
-    <link href="static/styles.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-</head>
-
-<body>
-    <div class="flares">
-        <img src="static/images/flare-top.png" loading="lazy" sizes="(max-width: 1920px) 100vw, 1920px"
-            srcset="flare-top-500.png 500w, static/images/flare-top-800.png 800w, static/images/flare-top-1080.png 1080w, static/images/flare-top.png 1920w"
-            alt="" class="flares-top">
-        <img src="static/images/flare-right.png" loading="lazy" sizes="(max-width: 1622px) 100vw, 1622px"
-            srcset="static/images/flare-right-500.png 500w, static/images/flare-right-800.png 800w, static/images/flare-right-1080.png 1080w, static/images/flare-right.png 1622w"
-            alt="" class="new-flare-nav top-right hide-mobile">
-        <img src="static/images/flare-left.png" loading="lazy" sizes="(max-width: 1518px) 100vw, 1518px"
-            srcset="static/images/flare-left-500.png 500w, static/images/flare-left-800.png 800w, static/images/flare-left.png 1518w"
-            alt="" class="new-flare-nav top-left hide-mobile">
-    </div>
-
-    <div class="container">
-        <div class="hero">
-
-            <h1>Hello from FL0.</h1>
-            <p>Congratulations, you've deployed a Python web server with FL0!</p>
+<h3 class="display-6">Comics</h3>
+<hr>
+<div id="carouselId" class="carousel slide mb-3" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+        <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+        <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>.
+        <li data-bs-target="#carouselId" data-bs-slide-to="3" aria-label="4 slide"></li>
+        <li data-bs-target="#carouselId" data-bs-slide-to="4" aria-label="5 slide"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+            <img src="https://i.pinimg.com/564x/ee/f8/bf/eef8bf1bda8afffe8444e8a22f09be95.jpg" class="w-100 d-block" alt="First slide">
         </div>
-        <div class="logo">
-            <img src="static/images/logo.svg" loading="lazy" alt="">
-
+        <div class="carousel-item">
+            <img src="https://i.pinimg.com/564x/ee/f8/bf/eef8bf1bda8afffe8444e8a22f09be95.jpg" class="w-100 d-block" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.pinimg.com/564x/ee/f8/bf/eef8bf1bda8afffe8444e8a22f09be95.jpg" class="w-100 d-block" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.pinimg.com/564x/ee/f8/bf/eef8bf1bda8afffe8444e8a22f09be95.jpg" class="w-100 d-block" alt="4 slide">
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.pinimg.com/564x/ee/f8/bf/eef8bf1bda8afffe8444e8a22f09be95.jpg" class="w-100 d-block" alt="5 slide">
         </div>
     </div>
-    <script type="text/javascript">
-        document.addEventListener('click', function (event) {
-            const x = event.clientX / window.innerWidth;
-            const y = event.clientY / window.innerHeight;
-            confetti({
-                origin: { x, y }
-            });
-        });
-        confetti();
-    </script>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<h3 class="display-6">Mangas</h3>
+<hr>
+<div id="carouselId" class="carousel slide mb-3" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+        <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+        <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>.
+        <li data-bs-target="#carouselId" data-bs-slide-to="3" aria-label="4 slide"></li>
+        <li data-bs-target="#carouselId" data-bs-slide-to="4" aria-label="5 slide"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+            <img src="https://i.pinimg.com/564x/ee/f8/bf/eef8bf1bda8afffe8444e8a22f09be95.jpg" class="w-100 d-block" alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.pinimg.com/564x/ee/f8/bf/eef8bf1bda8afffe8444e8a22f09be95.jpg" class="w-100 d-block" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.pinimg.com/564x/ee/f8/bf/eef8bf1bda8afffe8444e8a22f09be95.jpg" class="w-100 d-block" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.pinimg.com/564x/ee/f8/bf/eef8bf1bda8afffe8444e8a22f09be95.jpg" class="w-100 d-block" alt="4 slide">
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.pinimg.com/564x/ee/f8/bf/eef8bf1bda8afffe8444e8a22f09be95.jpg" class="w-100 d-block" alt="5 slide">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
-</body>
+
+<h3 class="display-6">Tutoriales</h3>
+<hr>
+<div id="carouselId" class="carousel slide mb-3" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+        <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+        <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>.
+        <li data-bs-target="#carouselId" data-bs-slide-to="3" aria-label="4 slide"></li>
+        <li data-bs-target="#carouselId" data-bs-slide-to="4" aria-label="5 slide"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+            <img src="https://i.pinimg.com/564x/ee/f8/bf/eef8bf1bda8afffe8444e8a22f09be95.jpg" class="w-100 d-block" alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.pinimg.com/564x/ee/f8/bf/eef8bf1bda8afffe8444e8a22f09be95.jpg" class="w-100 d-block" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.pinimg.com/564x/ee/f8/bf/eef8bf1bda8afffe8444e8a22f09be95.jpg" class="w-100 d-block" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.pinimg.com/564x/ee/f8/bf/eef8bf1bda8afffe8444e8a22f09be95.jpg" class="w-100 d-block" alt="4 slide">
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.pinimg.com/564x/ee/f8/bf/eef8bf1bda8afffe8444e8a22f09be95.jpg" class="w-100 d-block" alt="5 slide">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+{% include 'sitio/footer.html' %}
+
