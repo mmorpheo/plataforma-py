@@ -1,0 +1,132 @@
+{% include 'admin/header.html' %}
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-10">
+            <h3 class="h3">Listado de Tutoriales</h3>
+        </div>
+        <div class="col-md-2">
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalId">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitleId">Agregar un nuevo tutorial</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+
+                                <!-- FORMULARIO DE REGISTRO DE TUTORIALES -->
+
+                                <form action="/admin/tutoriales/guardar" method="post">
+
+                                    <div class="mb-3">
+                                        <label for="txtTituloTutorial" class="form-label">Título del tutorial:</label>
+                                        <input type="text" class="form-control" name="txtTituloTutorial"
+                                            id="txtTituloTutorial" aria-describedby="helpId"
+                                            placeholder="Escribe tu usuario">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="fileAdjuntoTutorial" class="form-label">Adjuntar Archivo
+                                            (Opcional)</label>
+                                        <input type="file" class="form-control" name="fileAdjunto" id="fileAdjunto"
+                                            placeholder="" aria-describedby="fileHelpId">
+                                    </div>
+                                    <hr>
+                                    
+                                    <hr>
+                                    <div class="mb-3">
+                                        <label for="txtCategoria" class="form-label">Categoría</label>
+                                        <select class="form-select" name="txtCategoria" id="txtCategoria">
+                                            <option selected>Selecciona una</option>
+                                            <option value="">New Delhi</option>
+                                            <option value="">Istanbul</option>
+                                            <option value="">Jakarta</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="txtTutorial" class="form-label">Descripción del Tutorial</label>
+                                        <textarea class="form-control" name="txtTutorial" id="txtTutorial"
+                                            rows="15"></textarea>
+                                    </div>
+
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <center>
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="submit" class="btn btn-success">Agregar</button>
+                            </center>
+                        </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                var modalId = document.getElementById('modalId');
+
+                modalId.addEventListener('show.bs.modal', function (event) {
+                    // Button that triggered the modal
+                    let button = event.relatedTarget;
+                    // Extract info from data-bs-* attributes
+                    let recipient = button.getAttribute('data-bs-whatever');
+
+                    // Use above variables to manipulate the DOM
+                });
+            </script>
+
+        </div>
+
+        <!-- FIN DE LA VENTANA MODAL -->
+
+    </div>
+
+    <hr>
+
+
+    <!-- TABLA PARA LISTAR/EDITAR LOS TUTORIALES -->
+
+    <div class="table-responsive-md">
+        <table class="table table-borderless align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th>Tutorial</th>
+                    <th>Column 2</th>
+                    <th>Column 3</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                <tr class="">
+                    <td scope="row">Item</td>
+                    <td>Item</td>
+                    <td>Item</td>
+                </tr>
+                <tr class="">
+                    <td scope="row">Item</td>
+                    <td>Item</td>
+                    <td>Item</td>
+                </tr>
+            </tbody>
+            <tfoot>
+
+            </tfoot>
+        </table>
+    </div>
+
+
+    {% include 'admin/footer.html' %}
