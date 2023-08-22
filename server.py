@@ -11,7 +11,7 @@ def serve_static(path):
 
 @app.route('/')
 def home():
-   return render_template('index.html')
+   return render_template('sitio/index.html')
 
 @app.route('/<path:path>')
 def all_routes(path):
